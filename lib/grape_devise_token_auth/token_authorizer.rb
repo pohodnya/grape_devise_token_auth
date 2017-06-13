@@ -36,7 +36,7 @@ module GrapeDeviseTokenAuth
     end
 
     def load_user_from_uid
-      @user = resource_class.where('$or' => Devise.case_insensitive_keys.map {|k| {k => uid}})
+      @user = resource_class.where('$or' => Devise.case_insensitive_keys.map {|k| {k => uid}}).first
     end
 
     def resource_from_existing_devise_user
