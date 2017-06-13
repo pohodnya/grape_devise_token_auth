@@ -7,8 +7,8 @@ module GrapeDeviseTokenAuth
     CLIENT_KEY = 'HTTP_CLIENT'
 
     def initialize
-      @batch_request_buffer_throttle  ||= DeviseTokenAuth.batch_request_buffer_throttle
-      @change_headers_on_each_request ||= DeviseTokenAuth.change_headers_on_each_request
+      @batch_request_buffer_throttle  ||= ::DeviseTokenAuth.batch_request_buffer_throttle
+      @change_headers_on_each_request ||= ::DeviseTokenAuth.change_headers_on_each_request
       @authenticate_all = false
     end
 
