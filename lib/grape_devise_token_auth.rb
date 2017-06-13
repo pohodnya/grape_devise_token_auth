@@ -4,6 +4,7 @@
    end
 
 require 'grape'
+require 'devise_token_auth'
 
 module GrapeDeviseTokenAuth
   class << self
